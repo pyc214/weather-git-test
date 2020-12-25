@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        >
+
+        <!--输入的文本框-->
+        <EditText
+            android:id="@+id/main_et_result"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="请输入数字"
+            />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="5"
+        android:columnCount="4"
+        android:layout_gravity="center|top"
+        >
+
+        <Button
+            android:id="@+id/main_btn1"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="1"
+            />
+
+        <Button
+            android:id="@+id/main_btn2"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="2"
+            />
+
+        <Button
+            android:id="@+id/main_btn3"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="3"
+            />
+
+        <Button
+            android:id="@+id/main_btnc"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="/"
+            />
+
+        <Button
+            android:id="@+id/main_btn4"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="4"
+            />
+
+        <Button
+            android:id="@+id/main_btn5"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="5"
+            />
+        <Button
+            android:id="@+id/main_btn6"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="6"
+            />
+        <Button
+            android:id="@+id/main_btnx"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="*"
+            />
+        <Button
+            android:id="@+id/main_btn7"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="7"
+            />
+        <Button
+            android:id="@+id/main_btn8"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="8"
+            />
+
+        <Button
+            android:id="@+id/main_btn9"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="9"
+            />
+
+        <Button
+            android:id="@+id/main_btndel"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="del"
+            />
+
+        <Button
+            android:id="@+id/main_btnj"
+            android:layout_width="90dp"
+            android:layout_height="63dp"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/main_btn0"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_horizontal"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/main_btnd"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="."
+            />
+
+        <Button
+            android:id="@+id/main_btn1a"
+            android:layout_width="90dp"
+            android:layout_height="71dp"
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill_vertical"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/main_btn1d"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill_horizontal"
+            android:text="="
+
+            />
+
+        <Space />
+    </GridLayout>
+
+</GridLayout>

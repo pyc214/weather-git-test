@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -13,7 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddActivity"></activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.myweather.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:name=".JisuanqiActivity"></activity>
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".AddActivity" />
         <activity android:name=".SelectActivity" />
         <activity android:name=".NoteActivity" />
         <activity android:name=".welcome" />
@@ -30,5 +43,8 @@
         <activity android:name=".WeatherActivity" />
         <activity android:name=".MainActivity" />
     </application>
+
+
+
 
 </manifest>

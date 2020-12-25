@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class NoteActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button bt_add,note_back;
+    private Button bt_add,note_back,camera,jisuanqi;
     private ListView lv;
     private NotesDB notesDB;
     private SQLiteDatabase dbReader;
@@ -32,6 +32,10 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
         bt_add.setOnClickListener(this);
         note_back = findViewById(R.id.note_back);
         note_back.setOnClickListener(this);
+        camera = findViewById(R.id.camera);
+        camera.setOnClickListener(this);
+        jisuanqi = findViewById(R.id.jisuanqi);
+        jisuanqi.setOnClickListener(this);
         notesDB = new NotesDB(this);
         dbReader = notesDB.getReadableDatabase();
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -67,6 +71,14 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.note_back:
                 finish();
+                break;
+            case R.id.camera:
+                intent= new Intent(this,CameraActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.jisuanqi:
+                intent= new Intent(this,JisuanqiActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;

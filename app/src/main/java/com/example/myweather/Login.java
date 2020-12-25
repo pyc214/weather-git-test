@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     //private Button back;
     private Button login;
     private Button reg;
+    private MediaPlayer mediaPlayer;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -60,7 +62,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     }
     public void onClick(View v)
     {
+        switch (v.getId()){
+            case R.id.login_btn:
 
+                break;
+        }
         username = edittext1.getText().toString();
         pwd = edittext2.getText().toString();
         SQLiteDatabase db = dbHelper1.getWritableDatabase();
@@ -74,7 +80,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     Toast.makeText( Login.this,"登入成功！", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this,MainActivity.class);
                     startActivity(intent);
-
+                    mediaPlayer=MediaPlayer.create(this,R.raw.music);
+                    mediaPlayer.start();
                 }
             }while(cursor.moveToNext());
             //Toast.makeText( Login.this,"你输入的密码错误！",Toast.LENGTH_SHORT).show();
